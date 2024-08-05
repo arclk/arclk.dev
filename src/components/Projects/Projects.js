@@ -53,6 +53,17 @@ function Projects() {
             <ProjectCard
               // imgPath={}
               isBlog={false}
+              title="Quadcopter Simulator"
+              description="Simulation tool of 2D quadcopters that navigate using noisy GPS position mitigated by the usage of a Kalman filter for state estimation."
+              ghLink="https://github.com/arclk/quadcopter-simulator"
+              // demoLink={}
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              // imgPath={}
+              isBlog={false}
               title="Perfect Weighted Packing (PWP) Problem"
               description="This project focuses on solving the Perfect Weighted Packing (PWP) problem, which involves packing a set of rectangles into a strip without overlapping, using two different approaches: Constraint Programming (CP) and Satisfiability Modulo Theories (SMT)."
               ghLink="https://github.com/arclk/perfect-weighted-packing-problem"
