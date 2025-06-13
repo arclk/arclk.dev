@@ -1,13 +1,12 @@
 import { useState, useMemo } from "react";
-import { Container, Row, Col, ButtonGroup, Button } from "react-bootstrap";
-import { BsGrid3X3Gap, BsList, BsFilter } from "react-icons/bs";
+import { Container, Row, Col, Button, Dropdown } from "react-bootstrap";
+import { BsFilter } from "react-icons/bs";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 import { projects } from "../../data/projects";
 
 function Projects() {
   const [filter, setFilter] = useState("All");
-  const [viewMode, setViewMode] = useState("grid");
 
   const categories = ["All", ...new Set(projects.map(p => p.category))];
 
@@ -20,6 +19,10 @@ function Projects() {
 
     return filtered;
   }, [filter]);
+
+  const handleFilterChange = (category) => {
+    setFilter(category);
+  };
 
   return (
     <Container fluid className="project-section">
@@ -34,45 +37,61 @@ function Projects() {
           </p>
         </div>
 
-        {/* Filter and View Controls */}
+        {/* Filter Controls - Simplified */}
         <Row className="mb-4">
-          <Col lg={8} className="mb-3">
-            <div className="d-flex flex-wrap align-items-center gap-3">
-              <div className="d-flex align-items-center gap-2">
-                <BsFilter className="text-white" />
-                <span className="text-white">Filter:</span>
-                <ButtonGroup size="sm">
+          {/* Mobile Only - Dropdown Layout */}
+          <Col xs={12} className="d-block d-md-none mb-3">
+            <div className="d-flex align-items-center gap-2 justify-content-center">
+              <BsFilter className="text-white" />
+              <span className="text-white">Filter:</span>
+                
+              <Dropdown>
+                <Dropdown.Toggle 
+                  variant="outline-light" 
+                  id="dropdown-filter-mobile"
+                  size="sm"
+                  className="d-flex align-items-center gap-2"
+                >
+                  {filter}
+                </Dropdown.Toggle>
+                <Dropdown.Menu>
                   {categories.map(category => (
-                    <Button
+                    <Dropdown.Item
                       key={category}
-                      variant={filter === category ? "success" : "outline-light"}
-                      onClick={() => setFilter(category)}
-                      size="sm"
+                      active={filter === category}
+                      onClick={() => handleFilterChange(category)}
                     >
                       {category}
-                    </Button>
+                    </Dropdown.Item>
                   ))}
-                </ButtonGroup>
-              </div>
+                </Dropdown.Menu>
+              </Dropdown>
             </div>
           </Col>
-          
-          <Col lg={4} className="mb-3">
-            <div className="d-flex align-items-center justify-content-lg-end gap-3">
-              <ButtonGroup size="sm">
-                <Button
-                  variant={viewMode === "grid" ? "success" : "outline-light"}
-                  onClick={() => setViewMode("grid")}
-                >
-                  <BsGrid3X3Gap />
-                </Button>
-                <Button
-                  variant={viewMode === "list" ? "success" : "outline-light"}
-                  onClick={() => setViewMode("list")}
-                >
-                  <BsList />
-                </Button>
-              </ButtonGroup>
+
+          {/* Desktop and Tablet - Filter Buttons */}
+          <Col xs={12} className="d-none d-md-block">
+            <div className="d-flex align-items-center justify-content-center">
+              <div className="d-flex align-items-center gap-2 flex-wrap justify-content-center">
+                <BsFilter className="text-white" />
+                <span className="text-white">Filter:</span>
+                {categories.map(category => (
+                  <Button
+                    key={category}
+                    variant={filter === category ? "success" : "outline-light"}
+                    onClick={() => handleFilterChange(category)}
+                    size="sm"
+                    style={{ 
+                      whiteSpace: 'nowrap',
+                      pointerEvents: 'all',
+                      zIndex: 10,
+                      position: 'relative'
+                    }}
+                  >
+                    {category}
+                  </Button>
+                ))}
+              </div>
             </div>
           </Col>
         </Row>
@@ -90,9 +109,9 @@ function Projects() {
             <Col 
               key={project.id}
               xs={12}
-              md={viewMode === "list" ? 12 : 6}
-              lg={viewMode === "list" ? 12 : 4}
-              className="project-card mb-4"
+              md={6}
+              lg={4}
+              className="project-card"
             >
               <ProjectCard
                 imgPath={project.image}
@@ -104,7 +123,6 @@ function Projects() {
                 technologies={project.technologies}
                 category={project.category}
                 year={project.year}
-                viewMode={viewMode}
               />
             </Col>
           ))}
@@ -115,7 +133,7 @@ function Projects() {
             <p className="text-muted">No projects found matching the current filters.</p>
             <Button 
               variant="outline-light" 
-              onClick={() => setFilter("All")}
+              onClick={() => handleFilterChange("All")}
             >
               Clear Filters
             </Button>

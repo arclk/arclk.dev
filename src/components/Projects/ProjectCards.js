@@ -87,7 +87,7 @@ function ProjectCards(props) {
       )}
       
       <Card.Body className="d-flex flex-column">
-        <div className="d-flex justify-content-between align-items-start mb-2">
+        <div className="d-flex justify-content-between align-items-start mb-4">
           <Badge bg="success" className="text-dark">
             {props.category}
           </Badge>
