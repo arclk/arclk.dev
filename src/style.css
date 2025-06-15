@@ -401,6 +401,10 @@ button:focus {
 /* --------- */
 /* Timeline */
 /* --------- */
+.vertical-timeline {
+	padding: 0px !important;
+}
+
 .vertical-timeline-element-date {
 	padding: 0 !important;
 	margin: 0 !important;
