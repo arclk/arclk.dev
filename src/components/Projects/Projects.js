@@ -11,13 +11,13 @@ function Projects() {
   const categories = ["All", ...new Set(projects.map(p => p.category))];
 
   const filteredProjects = useMemo(() => {
-    let filtered = projects;
-
-    if (filter !== "All") {
-      filtered = filtered.filter(project => project.category === filter);
-    }
-
-    return filtered;
+    return projects
+      .filter(project => filter === "All" || project.category === filter)
+      .sort((a, b) => {
+        const yearA = parseInt(a.year) || 0;
+        const yearB = parseInt(b.year) || 0;
+        return yearB - yearA; // Ordine decrescente (più recenti prima)
+      });
   }, [filter]);
 
   const handleFilterChange = (category) => {
