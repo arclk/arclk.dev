@@ -67,7 +67,9 @@ function Home2() {
           <div><span>&nbsp;&nbsp;</span></div>
         </Row>
         <Row>
-          <Experience></Experience>
+          <div style={{padding: "0.5rem"}}>
+            <Experience></Experience>
+          </div>
         </Row>
         <Row>
           <div><span>&nbsp;&nbsp;</span></div>

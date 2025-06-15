@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
-import Home2 from "./Home2";
+import Introduction from "./Indroduction";
 import Type from "./Type";
 
 
@@ -41,7 +41,7 @@ function Home() {
           </Row>
         </Container>
       </Container>
-      <Home2 />
+      <Introduction />
       
     </section>
   );
