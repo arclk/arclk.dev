@@ -10,7 +10,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 import Experience from "./Experience";
 
 
-function Home2() {
+function Indroduction() {
   return (
     <Container fluid className="home-about-section" id="about">
       <Container>
@@ -119,4 +119,4 @@ function Home2() {
     </Container>
   );
 }
-export default Home2;
+export default Indroduction;
