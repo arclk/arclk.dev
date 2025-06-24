@@ -1,21 +1,28 @@
 {
   "files": {
-    "main.css": "/static/css/main.c3b832d3.css",
-    "main.js": "/static/js/main.ea53c9cf.js",
+    "main.css": "/static/css/main.18458bf8.css",
+    "main.js": "/static/js/main.dc957231.js",
     "static/js/770.b477def6.chunk.js": "/static/js/770.b477def6.chunk.js",
     "static/js/453.1407b060.chunk.js": "/static/js/453.1407b060.chunk.js",
+    "static/media/no_image.png": "/static/media/no_image.8bf37ab9d501fc3141b0.png",
+    "static/media/store_shelves.png": "/static/media/store_shelves.89d23d44e1486ca098b7.png",
     "static/media/Curriculum_Vitae.pdf": "/static/media/Curriculum_Vitae.17ad732783fdaf2e2055.pdf",
+    "static/media/quadcopters.png": "/static/media/quadcopters.228e33483bcee8269fd0.png",
+    "static/media/pracgsmln.png": "/static/media/pracgsmln.8d21eac640c6dd23e9c1.png",
     "static/media/logo.png": "/static/media/logo.684962de176dcaae6191.png",
+    "static/media/clickbait_analysis.png": "/static/media/clickbait_analysis.15a66030abc748dad2ff.png",
+    "static/media/pwp.png": "/static/media/pwp.488a09b5895463d8d211.png",
+    "static/media/seqijr_model_diagram.png": "/static/media/seqijr_model_diagram.4443a234b2c5d16860f4.png",
     "static/media/avatar.png": "/static/media/avatar.facc184cf35f3c4f8d7b.png",
     "static/media/pre.svg": "/static/media/pre.764b73ed3f9bec1ec75c.svg",
     "index.html": "/index.html",
-    "main.c3b832d3.css.map": "/static/css/main.c3b832d3.css.map",
-    "main.ea53c9cf.js.map": "/static/js/main.ea53c9cf.js.map",
+    "main.18458bf8.css.map": "/static/css/main.18458bf8.css.map",
+    "main.dc957231.js.map": "/static/js/main.dc957231.js.map",
     "770.b477def6.chunk.js.map": "/static/js/770.b477def6.chunk.js.map",
     "453.1407b060.chunk.js.map": "/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c3b832d3.css",
-    "static/js/main.ea53c9cf.js"
+    "static/css/main.18458bf8.css",
+    "static/js/main.dc957231.js"
   ]
 }
