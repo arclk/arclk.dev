@@ -77,7 +77,7 @@ export const projects = [
     description: "Development of an agent-based system for natural language interaction with PowerBI dashboards. Built on OpenWebUI, featuring visual components using RAG, query translation for reporting, and a semantic PowerBI model with QnA visuals. Includes advanced query agent using knowledge base semantics for automatic DAX code generation.",
     githubLink: null,
     demoLink: null,
-    image: null, //require("../Assets/Projects/powerbi_agent.png"), // You'll need to add this image
+    image: require("../Assets/Projects/no_image.png"),
     technologies: ["OpenWebUI", "RAG", "PowerBI", "DAX", "Natural Language Processing", "Semantic Modeling"],
     isBlog: false,
     category: "AI/ML",
@@ -89,7 +89,7 @@ export const projects = [
     description: "Web application using LLM models to automatically analyze sentiment and classify thematic content of text comments. Through prompt engineering and LLM inference, the system determines emotional polarity and categorizes textual content.",
     githubLink: null,
     demoLink: null,
-    image: null, //require("../Assets/Projects/sentiment_analysis.png"), // You'll need to add this image
+    image: require("../Assets/Projects/no_image.png"),
     technologies: ["LLM", "Prompt Engineering", "Sentiment Analysis", "Text Classification", "Web Application"],
     isBlog: false,
     category: "AI/ML",
@@ -101,7 +101,7 @@ export const projects = [
     description: "Design and implementation of various custom web applications to perform analysis on data from different Research and Development areas.",
     githubLink: null,
     demoLink: null,
-    image: null, //require("../Assets/Projects/rd_analysis.png"), // You'll need to add this image
+    image: require("../Assets/Projects/no_image.png"),
     technologies: ["Web Development", "Data Analysis", "Custom Applications", "R&D Analytics"],
     isBlog: false,
     category: "Data Science",
@@ -113,7 +113,7 @@ export const projects = [
     description: "Development of a middleware system for seamless communication and data synchronization between two systems, utilizing AWS SQS for message queuing, AWS Lambda functions for event-driven computation, and AWS DynamoDB for storing and enriching data. Used Terraform for provisioning and managing the AWS infrastructure as code, ensuring consistent and reproducible deployments.",
     githubLink: null,
     demoLink: null,
-    image: null, //require("../Assets/Projects/middleware_sync.png"), // You'll need to add this image
+    image: require("../Assets/Projects/no_image.png"),
     technologies: ["AWS", "Lambda", "Message Queues", "Event-Driven Architecture", "Data Synchronization", "Terraform", "Infrastructure as Code"],
     isBlog: false,
     category: "Backend",
@@ -125,7 +125,7 @@ export const projects = [
     description: "Design and development of full-stack web applications using FastAPI, Python, SQL, and Angular for analyzing and classifying sales of manufacturing products based on historical data, enabling data-driven decision-making. Deployed the web application with CI/CD on AWS Elastic Beanstalk, ensuring secure and scalable hosting.",
     githubLink: null,
     demoLink: null,
-    image: null, //require("../Assets/Projects/data_ranking.png"), // You'll need to add this image
+    image: require("../Assets/Projects/no_image.png"),
     technologies: ["FastAPI", "Python", "SQL", "Angular", "AWS Elastic Beanstalk", "CI/CD", "Data Analysis", "Full-Stack Development"],
     isBlog: false,
     category: "Data Science",
@@ -137,7 +137,7 @@ export const projects = [
     description: "Implementation of efficient data integration and data engineering solutions with ETL workflows using Talend Data Studio, Talend Cloud, and Talend Data Stewardship, ensuring seamless merging, cleaning, and reconciliation of manufacturing data from various sources to improve data quality and consistency.",
     githubLink: null,
     demoLink: null,
-    image: null, //require("../Assets/Projects/etl_pipeline.png"), // You'll need to add this image
+    image: require("../Assets/Projects/no_image.png"),
     technologies: ["ETL", "Talend Data Studio", "Talend Cloud", "Talend Data Stewardship", "Data Integration", "Data Quality", "Data Engineering"],
     isBlog: false,
     category: "Data Engineering",
