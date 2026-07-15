@@ -73,12 +73,12 @@ export const projects = [
   },
   {
     id: 7,
-    title: "AI Agent Prototype for PowerBI",
-    description: "Development of an agent-based system for natural language interaction with PowerBI dashboards. Built on OpenWebUI, featuring visual components using RAG, query translation for reporting, and a semantic PowerBI model with QnA visuals. Includes advanced query agent using knowledge base semantics for automatic DAX code generation.",
+    title: "AI Agent Prototype for BI Dashboards",
+    description: "Development of an agent-based system for natural language interaction with business intelligence dashboards. Built on an open-source conversational AI platform, featuring visual components using RAG, query translation for reporting, and a semantic BI model with QnA-style visuals. Includes an advanced query agent leveraging knowledge base semantics for automatic analytical query generation.",
     githubLink: null,
     demoLink: null,
     image: require("../Assets/Projects/no_image.png"),
-    technologies: ["OpenWebUI", "RAG", "PowerBI", "DAX", "Natural Language Processing", "Semantic Modeling"],
+    technologies: ["RAG", "Business Intelligence", "Natural Language Processing", "Semantic Modeling", "AI Agents"],
     isBlog: false,
     category: "AI/ML",
     year: "2025"
